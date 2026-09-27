@@ -1,0 +1,655 @@
+[
+  {
+    "phonetic": "iː",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "front",
+      "height": "close",
+      "backness": "front",
+      "rounded": false,
+      "length": "long"
+    },
+    "us_file": "ee.m4a",
+    "uk_file": "ee_uk.m4a"
+  },
+  {
+    "phonetic": "i",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "front",
+      "height": "close",
+      "backness": "front",
+      "rounded": false,
+      "length": "short"
+    },
+    "us_file": "i.m4a",
+    "uk_file": "i_uk.m4a"
+  },
+  {
+    "phonetic": "e",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "front",
+      "height": "open_mid",
+      "backness": "front",
+      "rounded": false,
+      "length": "short"
+    },
+    "us_file": "e.m4a",
+    "uk_file": "e_uk.m4a"
+  },
+  {
+    "phonetic": "æ",
+    "uk_file": "a_uk.m4a",
+    "us_file": "a.m4a",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "front",
+      "height": "near_open",
+      "backness": "front",
+      "rounded": false,
+      "length": "short"
+    }
+  },
+  {
+    "phonetic": "ɜː",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "central",
+      "height": "open_mid",
+      "backness": "central",
+      "rounded": false,
+      "length": "long"
+    },
+    "us_file": "er.m4a",
+    "uk_file": "er_uk.m4a"
+  },
+  {
+    "phonetic": "ə",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "central",
+      "height": "mid",
+      "backness": "central",
+      "rounded": false,
+      "length": "short"
+    },
+    "us_file": "eee_same.m4a",
+    "uk_file": "eee_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "ʌ",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "central",
+      "height": "open_mid",
+      "backness": "central",
+      "rounded": false,
+      "length": "short"
+    },
+    "us_file": "u.m4a",
+    "uk_file": "u_uk.m4a"
+  },
+  {
+    "phonetic": "uː",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "back",
+      "height": "close",
+      "backness": "back",
+      "rounded": true,
+      "length": "long"
+    },
+    "us_file": "moon.m4a",
+    "uk_file": "moon_uk.m4a"
+  },
+  {
+    "phonetic": "ʊ",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "back",
+      "height": "near_close",
+      "backness": "back",
+      "rounded": true,
+      "length": "short"
+    },
+    "us_file": "book.m4a",
+    "uk_file": "book_uk.m4a"
+  },
+  {
+    "phonetic": "ɔː",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "back",
+      "height": "open_mid",
+      "backness": "back",
+      "rounded": true,
+      "length": "long"
+    },
+    "us_file": "or.m4a",
+    "uk_file": "or_uk.m4a"
+  },
+  {
+    "phonetic": "ɒ",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "back",
+      "height": "open",
+      "backness": "back",
+      "rounded": true,
+      "length": "short"
+    },
+    "us_file": "o.m4a",
+    "uk_file": "o_uk.m4a"
+  },
+  {
+    "phonetic": "ɑː",
+    "category": "vowel",
+    "vowel": {
+      "type": "monophthong",
+      "position": "back",
+      "height": "open",
+      "backness": "back",
+      "rounded": false,
+      "length": "long"
+    },
+    "us_file": "ar.m4a",
+    "uk_file": "ar_uk.m4a"
+  },
+  {
+    "phonetic": "eɪ",
+    "us_file": "ai.m4a",
+    "uk_file": "ai_uk.m4a",
+    "category": "vowel",
+    "vowel": {
+      "type": "diphthong",
+      "diphthong_type": "closing",
+      "start": {
+        "height": "close_mid",
+        "backness": "front",
+        "rounded": false
+      },
+      "end": {
+        "height": "near_close",
+        "backness": "front",
+        "rounded": false
+      }
+    }
+  },
+  {
+    "phonetic": "aɪ",
+    "category": "vowel",
+    "vowel": {
+      "type": "diphthong",
+      "diphthong_type": "closing",
+      "start": {
+        "height": "open",
+        "backness": "front",
+        "rounded": false
+      },
+      "end": {
+        "height": "near_close",
+        "backness": "front",
+        "rounded": false
+      }
+    },
+    "us_file": "ie.m4a",
+    "uk_file": "ie_uk.m4a"
+  },
+  {
+    "phonetic": "ɔɪ",
+    "category": "vowel",
+    "vowel": {
+      "type": "diphthong",
+      "diphthong_type": "closing",
+      "start": {
+        "height": "open_mid",
+        "backness": "back",
+        "rounded": true
+      },
+      "end": {
+        "height": "near_close",
+        "backness": "front",
+        "rounded": false
+      }
+    },
+    "us_file": "oi.m4a",
+    "uk_file": "oi_uk.m4a"
+  },
+  {
+    "phonetic": "aʊ",
+    "category": "vowel",
+    "vowel": {
+      "type": "diphthong",
+      "diphthong_type": "closing",
+      "start": {
+        "height": "open",
+        "backness": "central",
+        "rounded": false
+      },
+      "end": {
+        "height": "near_close",
+        "backness": "back",
+        "rounded": true
+      }
+    },
+    "us_file": "ou.m4a",
+    "uk_file": "ou_uk.m4a"
+  },
+  {
+    "phonetic": "əʊ",
+    "alias": "oʊ",
+    "category": "vowel",
+    "vowel": {
+      "type": "diphthong",
+      "diphthong_type": "closing",
+      "start": {
+        "height": "close_mid",
+        "backness": "back",
+        "rounded": true
+      },
+      "end": {
+        "height": "near_close",
+        "backness": "back",
+        "rounded": true
+      }
+    },
+    "us_file": "oa.m4a",
+    "uk_file": "oa_uk.m4a"
+  },
+  {
+    "phonetic": "ɪə",
+    "alias": "ɪr",
+    "category": "vowel",
+    "vowel": {
+      "type": "diphthong",
+      "diphthong_type": "centring",
+      "start": {
+        "height": "near_close",
+        "backness": "front",
+        "rounded": false
+      },
+      "end": {
+        "height": "mid",
+        "backness": "central",
+        "rounded": false
+      }
+    },
+    "us_file": "ie_same.m4a",
+    "uk_file": "ie_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "eə",
+    "alias": "er",
+    "category": "vowel",
+    "vowel": {
+      "type": "diphthong",
+      "diphthong_type": "centring",
+      "start": {
+        "height": "open_mid",
+        "backness": "front",
+        "rounded": false
+      },
+      "end": {
+        "height": "mid",
+        "backness": "central",
+        "rounded": false
+      }
+    },
+    "us_file": "er_same.m4a",
+    "uk_file": "er_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "ʊə",
+    "alias": "ʊr",
+    "category": "vowel",
+    "vowel": {
+      "type": "diphthong",
+      "diphthong_type": "centring",
+      "start": {
+        "height": "near_close",
+        "backness": "back",
+        "rounded": true
+      },
+      "end": {
+        "height": "mid",
+        "backness": "central",
+        "rounded": false
+      }
+    },
+    "us_file": "ue_same.m4a",
+    "uk_file": "ue_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "p",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "plosive",
+      "place": "bilabial"
+    },
+    "us_file": "p.m4a",
+    "uk_file": "p_uk.m4a"
+  },
+  {
+    "phonetic": "t",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "plosive",
+      "place": "alveolar"
+    },
+    "us_file": "t.m4a",
+    "uk_file": "t_uk.m4a"
+  },
+  {
+    "phonetic": "k",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "plosive",
+      "place": "velar"
+    },
+    "us_file": "k.m4a",
+    "uk_file": "k_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "f",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "fricative",
+      "place": "labiodental"
+    },
+    "us_file": "f.m4a",
+    "uk_file": "f_uk.m4a"
+  },
+  {
+    "phonetic": "s",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "fricative",
+      "place": "alveolar"
+    },
+    "us_file": "s.m4a",
+    "uk_file": "s_uk.m4a"
+  },
+  {
+    "phonetic": "ʃ",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "fricative",
+      "place": "post_alveolar"
+    },
+    "us_file": "sh.m4a",
+    "uk_file": "sh_uk.m4a"
+  },
+  {
+    "phonetic": "θ",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "fricative",
+      "place": "dental"
+    },
+    "us_file": "three.m4a",
+    "uk_file": "three_uk.m4a"
+  },
+  {
+    "phonetic": "h",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "fricative",
+      "place": "glottal"
+    },
+    "us_file": "h.m4a",
+    "uk_file": "h_uk.m4a"
+  },
+  {
+    "phonetic": "tʃ",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "affricate",
+      "place": "post_alveolar"
+    },
+    "us_file": "ch_same.m4a",
+    "uk_file": "ch_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "tr",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "affricate",
+      "place": "post_alveolar"
+    },
+    "us_file": "tr_same.m4a",
+    "uk_file": "tr_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "ts",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiceless",
+      "manner": "affricate",
+      "place": "alveolar"
+    },
+    "us_file": "ts_same.m4a",
+    "uk_file": "ts_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "b",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "plosive",
+      "place": "bilabial"
+    },
+    "us_file": "b.m4a",
+    "uk_file": "b_uk.m4a"
+  },
+  {
+    "phonetic": "d",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "plosive",
+      "place": "alveolar"
+    },
+    "us_file": "d.m4a",
+    "uk_file": "d_uk.m4a"
+  },
+  {
+    "phonetic": "g",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "plosive",
+      "place": "velar"
+    },
+    "us_file": "g.m4a",
+    "uk_file": "g_uk.m4a"
+  },
+  {
+    "phonetic": "v",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "fricative",
+      "place": "labiodental"
+    },
+    "us_file": "v.m4a",
+    "uk_file": "v_uk.m4a"
+  },
+  {
+    "phonetic": "z",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "fricative",
+      "place": "alveolar"
+    },
+    "us_file": "z.m4a",
+    "uk_file": "z_uk.m4a"
+  },
+  {
+    "phonetic": "ʒ",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "fricative",
+      "place": "post_alveolar"
+    },
+    "us_file": "shen_same.m4a",
+    "uk_file": "shen_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "ð",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "fricative",
+      "place": "dental"
+    },
+    "us_file": "this.m4a",
+    "uk_file": "this_uk.m4a"
+  },
+  {
+    "phonetic": "r",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "approximant",
+      "place": "post_alveolar"
+    },
+    "us_file": "r.m4a",
+    "uk_file": "r_uk.m4a"
+  },
+  {
+    "phonetic": "dʒ",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "affricate",
+      "place": "post_alveolar"
+    },
+    "us_file": "j.m4a",
+    "uk_file": "j_uk.m4a"
+  },
+  {
+    "phonetic": "dr",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "affricate",
+      "place": "post_alveolar"
+    },
+    "us_file": "dr_same.m4a",
+    "uk_file": "dr_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "dz",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "affricate",
+      "place": "alveolar"
+    },
+    "us_file": "dz_same.m4a",
+    "uk_file": "dz_same_uk.m4a",
+    "validation": true
+  },
+  {
+    "phonetic": "m",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "nasal",
+      "place": "bilabial"
+    },
+    "us_file": "m.m4a",
+    "uk_file": "m_uk.m4a"
+  },
+  {
+    "phonetic": "n",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "nasal",
+      "place": "alveolar"
+    },
+    "us_file": "n.m4a",
+    "uk_file": "n_uk.m4a"
+  },
+  {
+    "phonetic": "ŋ",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "nasal",
+      "place": "velar"
+    },
+    "us_file": "ng.m4a",
+    "uk_file": "ng_uk.m4a"
+  },
+  {
+    "phonetic": "l",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "lateral",
+      "place": "alveolar"
+    },
+    "us_file": "l.m4a",
+    "uk_file": "l_uk.m4a"
+  },
+  {
+    "phonetic": "j",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "approximant",
+      "place": "palatal",
+      "approximant_type": "semivowel"
+    },
+    "us_file": "y.m4a",
+    "uk_file": "y_uk.m4a"
+  },
+  {
+    "phonetic": "w",
+    "category": "consonant",
+    "consonant": {
+      "voicing": "voiced",
+      "manner": "approximant",
+      "place": "labial_velar",
+      "approximant_type": "semivowel"
+    },
+    "us_file": "w.m4a",
+    "uk_file": "w_uk.m4a"
+  }
+]

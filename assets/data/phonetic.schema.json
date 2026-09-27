@@ -1,0 +1,201 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "phonetic": {
+        "type": "string",
+        "description": "音标名称"
+      },
+      "uk_file": {
+        "type": "string",
+        "description": "英音音标文件"
+      },
+      "us_file": {
+        "type": "string",
+        "description": "美音音标文件"
+      },
+      "category": {
+        "type": "string",
+        "enum": [
+          "vowel",
+          "consonant"
+        ],
+        "description": "分类:\n vowel元音\n consonant辅音"
+      },
+      "vowel": {
+        "type": "object",
+        "description": "元音",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": " monophthong :单元音 \n diphthong: 双元音",
+            "enum": ["monophthong", "diphthong"]
+          },
+          "position": {
+            "type": "string",
+            "description": "front: 前元音 \n  central: 中元音 \n back: 后元音",
+            "enum": ["front", "central", "back"]
+          },
+          "height": {
+            "type": "string",
+            "description": "舌位高度: 高 -> 低 close -> open\nclose: 闭元音/高元音\nnear_close: 次闭元音/近高元音\nclose_mid: 闭中元音/半高元音\nmid: 中元音\nopen_mid: 开中元音/半低元音\nnear_open: 次开元音/近低元音 \nopen: 开元音/低元音",
+            "enum": [
+              "close",
+              "near_close",
+              "close_mid",
+              "mid",
+              "open_mid",
+              "near_open",
+              "open"
+            ]
+          },
+          "backness": {
+            "type": "string",
+            "description": "舌位前后 \nfront: 前元音 \ncentral: 中元音/中央元音 \nback: 后元音",
+            "enum": [
+              "front",
+              "central",
+              "back"
+            ]
+          },
+          "rounded": {
+            "type": "boolean",
+            "description": "是否圆唇"
+          },
+          "length": {
+            "type": "string",
+            "description": "长短元音 \nshort: 短元音 \nlong: 长元音",
+            "enum": [
+              "short",
+              "long"
+            ]
+          },
+          "diphthong_type":{
+            "type":"string",
+            "description": "开合双元音 closing\n集中双元音 centring",
+            "enum": [
+              "closing",
+              "centring"
+            ]
+          },
+          "start": {
+              "type": "object",
+              "description": "双元音中的起点音",
+              "properties":{
+                "height": {
+                  "type": "string",
+                  "description": "舌位高度: 高 -> 低 close -> open\nclose: 闭元音/高元音\nnear_close: 次闭元音/近高元音\nclose_mid: 闭中元音/半高元音\nmid: 中元音\nopen_mid: 开中元音/半低元音\nnear_open: 次开元音/近低元音 \nopen: 开元音/低元音",
+                  "enum": [
+                    "close",
+                    "near_close",
+                    "close_mid",
+                    "mid",
+                    "open_mid",
+                    "near_open",
+                    "open"
+                  ]
+                },
+                "backness": {
+                  "type": "string",
+                  "description": "舌位前后 \nfront: 前元音 \ncentral: 中元音/中央元音 \nback: 后元音",
+                  "enum": [
+                    "front",
+                    "central",
+                    "back"
+                  ]
+                },
+                "rounded": {
+                  "type": "boolean",
+                  "description": "是否圆唇"
+                }
+              }
+            },
+            "end": {
+              "type": "object",
+              "description": "双元音中的结束音",
+              "properties":{
+                "height": {
+                  "type": "string",
+                  "description": "舌位高度: 高 -> 低 close -> open\nclose: 闭元音/高元音\nnear_close: 次闭元音/近高元音\nclose_mid: 闭中元音/半高元音\nmid: 中元音\nopen_mid: 开中元音/半低元音\nnear_open: 次开元音/近低元音 \nopen: 开元音/低元音",
+                  "enum": [
+                    "close",
+                    "near_close",
+                    "close_mid",
+                    "mid",
+                    "open_mid",
+                    "near_open",
+                    "open"
+                  ]
+                },
+                "backness": {
+                  "type": "string",
+                  "description": "舌位前后 \nfront: 前元音 \ncentral: 中元音/中央元音 \nback: 后元音",
+                  "enum": [
+                    "front",
+                    "central",
+                    "back"
+                  ]
+                },
+                "rounded": {
+                  "type": "boolean",
+                  "description": "是否圆唇"
+                }
+              }
+            }
+        }
+      },
+      "consonant": {
+        "type": "object",
+        "description": "辅音",
+        "properties": {
+
+          "place": {
+            "type": "string",
+            "description": "发音部位 \n 双唇音(bilabial) \n 唇齿音(labiodental) \n  齿音(dental) \n  齿龈音(alveolar) \n  后齿龈音(post_alveolar) \n  硬腭音(palatal) \n 软腭音(velar) \n 声门音(glottal) \n 唇软腭音(labial_velar)",
+            "enum": [
+              "bilabial",
+              "labiodental",
+              "dental",
+              "alveolar",
+              "post_alveolar",
+              "palatal",
+              "velar",
+              "glottal",
+              "labial_velar"
+            ]
+          },
+          "manner": {
+            "type": "string",
+            "description": "发音方式\n plosive: 爆破音\nfricative: 摩擦音 \naffricate: 破擦音 \nnasal: 鼻音 \napproximant: 近音 \nlateral: 边近音/舌侧音",
+            "enum": [
+              "plosive",
+              "fricative",
+              "affricate",
+              "nasal",
+              "approximant",
+              "lateral"
+            ]
+          },
+          "voicing": {
+            "type": "string",
+            "description": "清浊 \nvoiceless: 清音 \nvoiced: 浊音",
+            "enum": [
+              "voiceless",
+              "voiced"
+            ]
+          },
+          "approximant_type": {
+            "type":"string",
+            "description": "半元音 semivowel"
+          }
+        }
+      }
+    },
+    "required": [
+      "phonetic",
+      "uk_file",
+      "us_file"
+    ]
+  }
+}

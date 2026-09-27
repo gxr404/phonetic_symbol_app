@@ -1,0 +1,20 @@
+{
+  "dart.flutterHotReloadOnSave": "all",
+  "color-highlight.matchWords": true,
+  "color-highlight.useARGB": true,
+  "color-highlight.matchHslWithNoFunction": true,
+  "color-highlight.matchRgbWithNoFunction": true,
+  "commentTranslate.multiLineMerge": true,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "**/phonetic.json",       // 针对特定文件名
+      ],
+      // 指向你的 Schema 文件路径（支持相对路径或绝对 URL）
+      "url": "./assets/data/phonetic.schema.json"
+    }
+  ],
+  "cSpell.words": [
+    "backness"
+  ]
+}

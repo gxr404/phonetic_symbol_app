@@ -1,0 +1,6 @@
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/phonetic-splash.png
+  color_dark: "#000000"
+  android_12:
+    image: assets/images/phonetic-splash-android12.png
