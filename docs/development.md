@@ -78,3 +78,11 @@ bash scripts/bump.sh
 # 2. 脚本触发 git tag 的推送继而触发github action
 # .github/workflows/release.yml
 ```
+
+## 遇到的问题
+
+- versionCode
+  - app-v1.0.6-1-arm64-v8a-release.apk 编译后得到的versionCode 2001
+  - app-v1.0.6-1-release.apk 编译后得到的versionCode 1
+    - [相关docs](https://github.com/flutter/flutter/blob/d649d2bfebfeb0018b7333bd7bee1d5127661da2/docs/platforms/android/website-page-draft.md#setting-per-abi-or-per-variant-versioncode)
+    - build时 `--split-per-abi` 设置每个 ABI 的版本代码
