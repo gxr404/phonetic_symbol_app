@@ -1,2 +1,6 @@
 [tools]
 "aqua:flutter/flutter" = "3.44.6"
+
+[tasks.bump]
+description = "bump version"
+run = "bash scripts/bump.sh"
