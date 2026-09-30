@@ -1,13 +1,10 @@
 # 英语时态
 
-英语中常见的时态包括：
+16种时态
 
-- 一般现在时
-- 一般过去时
-- 现在进行时
-
-## 一般现在时
-
-基本结构：
-
-主语 + 动词原形 / 第三人称单数
+|          | 现在                  | 过去                | 将来                   | 过去将来                |
+| -------- | --------------------- | ------------------- | ---------------------- | ----------------------- |
+| 一般     | V / V-s               | V-ed / 不规则过去式 | will + V               | would + V               |
+| 进行     | am/is/are + V-ing     | was/were + V-ing    | will be + V-ing        | would be + V-ing        |
+| 完成     | have/has + V-pp       | had + V-pp          | will have + V-pp       | would have + V-pp       |
+| 完成进行 | have/has been + V-ing | had been + V-ing    | will have been + V-ing | would have been + V-ing |

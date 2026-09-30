@@ -84,7 +84,6 @@ enum ConsonantVoicing implements PhoneticType {
 //   voiced,
 //   voiceless,
 // }
-            // "description": "发音方式\n plosive: 爆破音\nfricative: 摩擦音 \naffricate: 破擦音 \nnasal: 鼻音 \napproximant: 近音 \nlateral: 边近音/舌侧音",
 
 /// 发音方式
 @JsonEnum(fieldRename: FieldRename.snake)

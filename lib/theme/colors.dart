@@ -74,28 +74,3 @@ const darkPhoneticColors = (
   lateral: Color(0xFF92A4B2),
   approximant: Color(0xFFA3A7AB),
 );
-
-
-/// 前元音
-// frontVowel: Color(0x)
-/// 中元音
-// centralVowel
-/// 后元音
-// backVowel
-/// 开合双元音
-// closingVowel
-/// 集中双元音
-// centringVowel
-/// 爆破音
-// plosive,
-/// 摩擦音
-// fricative,
-/// 破擦音
-// affricate,
-/// 鼻音
-// nasal,
-/// 边近音/舌侧音
-// lateral,
-/// 近音
-// approximant,
-

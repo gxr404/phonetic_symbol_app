@@ -36,12 +36,8 @@ class _PhoneticItemState extends ConsumerState<PhoneticItem> {
 
   Future<void> playAudio(String? audioFile) async {
     final phonetic = widget.phonetic;
-    // final settings = ref.watch(settingsNotifierProvider).requireValue;
 
     try {
-      // final audioFile = settings.pronounce == Pronounce.uk
-      //     ? phonetic.ukFile
-      //     : phonetic.usFile;
       if (audioFile == null || audioFile.isEmpty) {
         throw StateError(
           'Audio file not found for phonetic: ${phonetic.phonetic}',
@@ -74,10 +70,6 @@ class _PhoneticItemState extends ConsumerState<PhoneticItem> {
 
     return SuperTooltip(
       controller: _controller,
-      // barrierConfig: BarrierConfiguration(
-      //   show: true,
-      //   showBlur: true,  // Enable blur effect
-      // ),
       positionConfig: PositionConfiguration(
         preferredDirection: TooltipDirection.auto,
       ),
@@ -86,7 +78,6 @@ class _PhoneticItemState extends ConsumerState<PhoneticItem> {
         showOnTap: false,
       ),
       arrowConfig: ArrowConfiguration(tipDistance: 16.0),
-      // arrowConfig: const ArrowConfiguration(length: 15.0, baseWidth: 25.0),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -98,14 +89,6 @@ class _PhoneticItemState extends ConsumerState<PhoneticItem> {
           ),
         ],
       ),
-      // child: Container(
-      //   width: 40,
-      //   height: 40,
-      //   decoration: BoxDecoration(
-      //     color: bgColor,
-      //     borderRadius: BorderRadius.circular(8),
-      //   ),
-      //   alignment: .center,
       child: Material(
         color: Colors.transparent,
         child: Ink(
@@ -124,7 +107,8 @@ class _PhoneticItemState extends ConsumerState<PhoneticItem> {
               playAudio(audioFile);
             },
             onLongPress: () {
-              _controller.showTooltip();
+              // TODO: tips音标备注信息
+              // _controller.showTooltip();
             },
             child: Center(
               child: Text(

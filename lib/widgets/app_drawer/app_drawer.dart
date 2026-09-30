@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:phonetic_symbol_app/models/settings.model.dart';
 import 'package:phonetic_symbol_app/providers/settings.provider.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class AppDrawer extends ConsumerStatefulWidget {
   @override
@@ -10,23 +11,32 @@ class AppDrawer extends ConsumerStatefulWidget {
 }
 
 class _AppDrawerState extends ConsumerState<AppDrawer> {
-
-  // late final Pronounce _pronounce;
-  // Pronounce _pronounce = Pronounce.us;
-  // AppTheme _appTheme = AppTheme.light;
+  PackageInfo _packageInfo = PackageInfo(
+    appName: 'Unknown',
+    packageName: 'Unknown',
+    version: 'Unknown',
+    buildNumber: 'Unknown',
+    buildSignature: 'Unknown',
+    installerStore: 'Unknown',
+  );
 
   @override
   void initState() {
     super.initState();
-    // _pronounce = Pronounce.us;
+    _initPackageInfo();
+  }
+
+  Future<void> _initPackageInfo() async {
+    final info = await PackageInfo.fromPlatform();
+    setState(() {
+      _packageInfo = info;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     final settings = ref.watch(settingsNotifierProvider).requireValue;
-
     final c = Theme.of(context).colorScheme;
-
     const gap = 14.0;
     return Drawer(
       // shadowColor: c.onPrimary,
@@ -44,7 +54,7 @@ class _AppDrawerState extends ConsumerState<AppDrawer> {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: c.onSurface,
-                    fontSize: 16.0
+                    fontSize: 16.0,
                   ),
                 ),
               ),
@@ -64,13 +74,13 @@ class _AppDrawerState extends ConsumerState<AppDrawer> {
                           currnet: settings.pronounce,
                           values: Pronounce.values,
                           onChanged: (v) {
-                            // setState(() => _pronounce = v);
-                            ref.read(settingsNotifierProvider.notifier).togglePronounce();
+                            ref
+                                .read(settingsNotifierProvider.notifier)
+                                .togglePronounce();
                           },
-                          labelBuilder: (current) => current.label
+                          labelBuilder: (current) => current.label,
                         ),
-                      )
-                      // Expanded(child: Slider(value: 'en', onChanged: onChanged))
+                      ),
                     ],
                   ),
                   const SizedBox(height: gap),
@@ -83,17 +93,17 @@ class _AppDrawerState extends ConsumerState<AppDrawer> {
                           currnet: settings.theme,
                           values: AppTheme.values,
                           onChanged: (v) {
-                            // setState(() => _appTheme = v);
-                            ref.read(settingsNotifierProvider.notifier).toggleTheme();
+                            ref
+                                .read(settingsNotifierProvider.notifier)
+                                .toggleTheme();
                           },
-                          labelBuilder: (current) => current.label
+                          labelBuilder: (current) => current.label,
                         ),
-                      )
-                      // Expanded(child: Slider(value: 'en', onChanged: onChanged))
+                      ),
                     ],
-                  )
+                  ),
                 ],
-              )
+              ),
             ),
             // Bottom
             const Divider(height: 0),
@@ -102,24 +112,26 @@ class _AppDrawerState extends ConsumerState<AppDrawer> {
               child: Row(
                 mainAxisAlignment: .center,
                 children: [
-                  // Text('Phonetic', style: TextStyle(fontSize: 14, color: c.onSurfaceVariant)),
-                  Text('v0.0.1', style: TextStyle(fontSize: 14, color: c.onSurfaceVariant)),
+                  Text(
+                    'v${_packageInfo.version}${_packageInfo.buildNumber.isNotEmpty ? '+${_packageInfo.buildNumber}' : ''}',
+                    style: TextStyle(fontSize: 14, color: c.onSurfaceVariant),
+                  ),
                 ],
-              )
-            )
-          ]
+              ),
+            ),
+          ],
         ),
-      )
+      ),
     );
   }
 
   Widget genSwitch<T>(
-    BuildContext context,{
+    BuildContext context, {
     required T currnet,
     required List<T> values,
     // required FutureOr<void> Function(T) onChanged,
     required ValueChanged<T> onChanged,
-    required String Function(T) labelBuilder
+    required String Function(T) labelBuilder,
   }) {
     final c = Theme.of(context).colorScheme;
 
@@ -144,19 +156,15 @@ class _AppDrawerState extends ConsumerState<AppDrawer> {
           style: TextStyle(
             fontSize: 12,
             // color: c.primary
-            color: Color.lerp(
-              c.onSecondary,
-              c.primary,
-              local.animationValue
-            )
-          )
+            color: Color.lerp(c.onSecondary, c.primary, local.animationValue),
+          ),
         );
       },
       borderWidth: 4.0,
       iconOpacity: 1.0,
       iconAnimationType: AnimationType.onHover,
       style: switchStyle,
-      onChanged: onChanged
+      onChanged: onChanged,
     );
   }
 }

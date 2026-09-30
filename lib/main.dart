@@ -56,52 +56,6 @@ class MyApp extends ConsumerWidget {
         ),
       ),
   );
-
-    // final colorScheme = Theme.of(context).colorScheme;
-    // final settings = ref.watch(settingsNotifierProvider);
-    // return MaterialApp.router(
-    //   routerConfig: _appRouter.config(),
-    //   theme: getThemeData(colorSchemePreset[settings.requireValue.theme.value]!),
-    //   builder: (context, child) {
-    //     return settings.when(
-    //       loading: () => const Center(
-    //         child: CircularProgressIndicator(),
-    //       ),
-
-    //       error: (error, stackTrace) => Center(
-    //         child: Text('Failed to load settings: $error'),
-    //       ),
-    //       data: (_) => child!,
-
-    //     );
-
-    //   },
-    // );
-    // return settings.when(
-    //   loading: () => MaterialApp(
-    //     home: Scaffold(
-    //       body: Center(
-    //         child: CircularProgressIndicator(),
-    //       ),
-    //     )
-    //   ),
-    //   error:  (error, stackTrace) => MaterialApp(
-    //     home: Scaffold(
-    //       body: Center(
-    //         child: Text('Failed to load settings: $error'),
-    //       ),
-    //     ),
-    //   ),
-    //   data: (settings) => MaterialApp.router(
-    //     routerConfig: _appRouter.config(),
-    //     theme: getThemeData(colorSchemePreset[settings.theme.value]!)
-    //   )
-    // );
-
-    // return MaterialApp.router(
-    //   routerConfig: _appRouter.config(),
-    //   theme: getThemeData(colorSchemePreset[Brightness.light]!)
-    // );
   }
 }
 

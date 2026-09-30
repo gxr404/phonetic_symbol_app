@@ -5,7 +5,6 @@ import 'package:phonetic_symbol_app/models/phonetic.model.dart';
 import 'package:phonetic_symbol_app/widgets/phonetic_item.dart';
 import 'package:phonetic_symbol_app/providers/phonetic.provider.dart';
 
-// import 'package:phonetic_symbol_app/components/layouts/main_layout.dart';
 @RoutePage()
 class PhoneticPage extends ConsumerWidget {
   const PhoneticPage({super.key});
@@ -43,35 +42,6 @@ class PhoneticPage extends ConsumerWidget {
               );
             },
           ),
-          // Column(
-          //   children: [
-          //     // MainLayout(),
-          //     Expanded(
-          //       child: phoneticsGroups.when(
-          //         loading: () => const CircularProgressIndicator(),
-          //         error: (error, stack) => Text('$error'),
-          //         data: (data) {
-          //           // print("==============1111");
-          //           // print(data);
-          //           // print("==============2222");
-          //           return Container(
-          //             padding: .symmetric(vertical: 16, horizontal: 16),
-          //             width: double.infinity,
-          //             child: Column(
-          //               crossAxisAlignment: CrossAxisAlignment.start,
-          //               // alignment: .start,
-          //               children: [
-          //                 buildVowelSection(data, c),
-          //                 const SizedBox(height: 20),
-          //                 buildConsonantSection(data, c)
-          //               ],
-          //             ),
-          //           );
-          //         },
-          //       ),
-          //     ),
-          //   ],
-          // )
         ),
       ),
     );
@@ -190,7 +160,6 @@ class PhoneticPage extends ConsumerWidget {
     required ColorScheme c,
   }) {
     return [
-      // Text(title, style: TextStyle(fontSize: 12, color: c.onSecondary)),
       Row(
         children: [
           Container(

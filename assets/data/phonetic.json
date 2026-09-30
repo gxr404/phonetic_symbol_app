@@ -543,7 +543,7 @@
     "category": "consonant",
     "consonant": {
       "voicing": "voiced",
-      "manner": "approximant",
+      "manner": "fricative",
       "place": "post_alveolar"
     },
     "us_file": "r.m4a",

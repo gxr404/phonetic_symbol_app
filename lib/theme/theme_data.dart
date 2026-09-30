@@ -7,13 +7,7 @@ ThemeData getThemeData(ColorScheme colorScheme, Brightness currentTheme) {
     useMaterial3: true,
     colorScheme: colorScheme,
     fontFamily: GoogleFonts.inter().fontFamily,
-    // fontFamily: GoogleFonts.playwriteDeSas().fontFamily,
-    // fontFamily: GoogleFonts.pixelifySans().fontFamily,
-    // fontFamily: GoogleFonts.robotoSlab().fontFamily,
     textTheme: TextTheme(),
-    // bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    //   type: BottomNavigationBarType.fixed,
-    // ),
     appBarTheme: AppBarTheme(
       backgroundColor: colorScheme.primary,
       iconTheme: IconThemeData(color: colorScheme.onPrimary),
