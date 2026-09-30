@@ -6,9 +6,6 @@
 
 ## screenshot
 
-<image src="./docs/images/1.png" width="200" style="margin-right:20px;">
-<image src="./docs/images/2.png" width="200">
-<br />
-<br />
-<image src="./docs/images/3.png" width="200" style="margin-right:20px;">
-<image src="./docs/images/4.png" width="200">
+<image src="./docs/images/1.png" width="200">&nbsp;&nbsp;&nbsp;&nbsp;<image src="./docs/images/2.png" width="200">
+<br/><br/>
+<image src="./docs/images/3.png" width="200">&nbsp;&nbsp;&nbsp;&nbsp;<image src="./docs/images/4.png" width="200">
