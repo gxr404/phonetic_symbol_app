@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Release tag"
+        description: "Release tag (e.g. v1.0.6)"
         required: true
         type: string
 
@@ -16,6 +16,13 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - name: Set release tag
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "RELEASE_TAG=${{ inputs.tag }}" >> "$GITHUB_ENV"
+          else
+            echo "RELEASE_TAG=${GITHUB_REF_NAME}" >> "$GITHUB_ENV"
+          fi
       - name: Checkout code
         uses: actions/checkout@v6
 
@@ -57,14 +64,12 @@ jobs:
           VERSION=$(sed -n 's/^version: //p' pubspec.yaml)
 
           if [[ "$VERSION" == *"+"* ]]; then
-            VERSION_NAME="${VERSION%%+*}"
             BUILD_NUMBER="${VERSION#*+}"
           else
-            VERSION_NAME="$VERSION"
             BUILD_NUMBER="unknown"
           fi
 
-          TAG="${GITHUB_REF_NAME}"
+          TAG="$RELEASE_TAG"
 
           mkdir -p build/release
 
@@ -96,7 +101,7 @@ jobs:
       - name: Publish Android Artifact
         uses: actions/upload-artifact@v7
         with:
-          name: android-apk-${{ github.ref_name }}
+          name: android-apk-${{ env.RELEASE_TAG }}
           path: build/release/*.apk
 
       # - name: Save Gradle Cache
@@ -115,6 +120,6 @@ jobs:
         with:
           draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: ${{ github.ref_name }}
+          tag_name: ${{ env.RELEASE_TAG }}
           files: |
             build/release/*.apk
