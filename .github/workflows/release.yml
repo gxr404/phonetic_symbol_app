@@ -42,17 +42,57 @@ jobs:
           grep '^version:' pubspec.yaml
           echo "FLUTTER_BUILD_NUMBER=$FLUTTER_BUILD_NUMBER"
           echo "FLUTTER_BUILD_NAME=$FLUTTER_BUILD_NAME"
-
+     
       - name: Build Android App
         run: |
           flutter build apk --release
           flutter build apk --release --split-per-abi --target-platform android-arm,android-arm64,android-x64
+      - name: Rename Android APKs
+        run: |
+          VERSION=$(sed -n 's/^version: //p' pubspec.yaml)
 
+          if [[ "$VERSION" == *"+"* ]]; then
+            VERSION_NAME="${VERSION%%+*}"
+            BUILD_NUMBER="${VERSION#*+}"
+          else
+            VERSION_NAME="$VERSION"
+            BUILD_NUMBER="unknown"
+          fi
+
+          TAG="${GITHUB_REF_NAME}"
+
+          mkdir -p build/release
+
+          mv build/app/outputs/flutter-apk/app-release.apk \
+            "build/release/app-${TAG}-${BUILD_NUMBER}-release.apk"
+
+          mv build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk \
+            "build/release/app-${TAG}-${BUILD_NUMBER}-armeabi-v7a-release.apk"
+
+          mv build/app/outputs/flutter-apk/app-arm64-v8a-release.apk \
+            "build/release/app-${TAG}-${BUILD_NUMBER}-arm64-v8a-release.apk"
+
+          mv build/app/outputs/flutter-apk/app-x86_64-release.apk \
+            "build/release/app-${TAG}-${BUILD_NUMBER}-x86_64-release.apk"
+
+          ls -lh build/release
+      - name: Find versionCode overrides
+        run: |
+          echo "=== Search 2001 ==="
+          grep -R "2001" . \
+            --exclude-dir=.git \
+            --exclude-dir=.dart_tool \
+            --exclude-dir=build \
+            || true
+          echo "=== Search versionCode ==="
+          grep -R "versionCode" android \
+            --exclude-dir=.gradle \
+            || true
       - name: Publish Android Artifact
         uses: actions/upload-artifact@v7
         with:
-          name: android-apk
-          path: build/app/outputs/flutter-apk/*.apk
+          name: android-apk-${{ github.ref_name }}
+          path: build/release/*.apk
 
       # - name: Save Gradle Cache
       #   id: cache-gradle-save
@@ -66,9 +106,10 @@ jobs:
 
       - name: Create Release
         uses: softprops/action-gh-release@v3
-        if: github.ref_type == 'tag'
+        # if: github.ref_type == 'tag'
         with:
           draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ github.ref_name }}
           files: |
-            build/app/outputs/flutter-apk/*.apk
+            build/release/*.apk

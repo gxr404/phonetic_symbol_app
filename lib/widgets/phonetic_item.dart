@@ -84,7 +84,7 @@ class _PhoneticItemState extends ConsumerState<PhoneticItem> {
           RichText(
             text: TextSpan(
               text: '美式发音',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              // style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
         ],
@@ -117,7 +117,7 @@ class _PhoneticItemState extends ConsumerState<PhoneticItem> {
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: GoogleFonts.notoSans().fontFamily,
-                  fontWeight: FontWeight.bold,
+                  // fontWeight: FontWeight.bold,
                   color: c.onPrimary,
                 ),
               ),
