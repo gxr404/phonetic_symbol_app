@@ -36,6 +36,13 @@ jobs:
       - name: Install Flutter dependencies
         run: flutter pub get
 
+      - name: Check build environment
+        run: |
+          echo "pubspec version:"
+          grep '^version:' pubspec.yaml
+          echo "FLUTTER_BUILD_NUMBER=$FLUTTER_BUILD_NUMBER"
+          echo "FLUTTER_BUILD_NAME=$FLUTTER_BUILD_NAME"
+
       - name: Build Android App
         run: |
           flutter build apk --release
