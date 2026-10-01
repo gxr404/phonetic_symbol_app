@@ -72,12 +72,22 @@ Repository 负责
 
 ## Deployment
 
+release 发布
+
 ```bash
-# 1. 执行升版本
+# 1. 执行升版本 (major/minor/patch)
 bash scripts/bump.sh
 # 2. 脚本触发 git tag 的推送继而触发github action
 # .github/workflows/release.yml
 ```
+
+构建版发布
+```bash
+# 1. 执行 bump脚本时选 build 版
+bash scripts/bump.sh
+# 2. 手动触发github action 的 release 工作流(输入构建产物需要追加到的release版本号)
+```
+
 
 ## 遇到的问题
 
