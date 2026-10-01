@@ -1,5 +1,7 @@
 # phonetic_symbol_app
 
+一款英语音标学习app
+
 ## download
 
 - [下载apk安装](https://github.com/gxr404/phonetic_symbol_app/releases)
